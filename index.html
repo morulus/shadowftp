@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shadowftp — конструктор файлов для Grunt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Конструктор файлов">
+	<meta name="keywords" content="grunt npm snipper plugin">
+	<link rel="stylesheet" href="demo/styles/patch-layout.css" />
+	<link rel="stylesheet" href="demo/styles/main.css" />
+
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/zenburn.min.css" />
+	<link rel="stylesheet" href="demo/styles/hightlight-style.css" />
+	
+	<script src="demo/vendor.js" baseurl="" no-bower></script>
+	<script src="demo/highlight.min.js"></script>
+	<script src="demo/javascript.min.js"></script>
+	<script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+					<h1>Shadowftp</h1>
+					<summary class="white" id="descript">
+					Модуль для node.js, который осуществляет заливку нужных файлов на ftp сервер.
+					</summary>
+				</div>
+				<div class="col-sm-6">
+					<h2>Установка</h2>
+					<summary>Рекомендуется устанавливать этот модуль глобально.</summary>
+					<pre><code>npm install -g shadowftp</code></pre>
+					<h2>Альфа-версия</h2>
+					<summary>Этот плагин находится на стадии первичной разработки. Его разработка начата из-за необходимости частой заливки конкретных файлов на конкретный ftp-сервер. Но до универсальности ему ещё далеко.</summary>
+				</div>
+				<div class="col-sm-12">
+					<h4>Использование</h4>
+					<summary>Для работы в корне рабочей директории (или любой другой) должен находится файл <code>.shadowftprc</code>, содержащий доступы к ftp серверу и пути файлов на локальном компьютере и удаленном. При каждом вызове команды shadowftp в директории содержащий этот файл происходит соединение с удаленным сервером и загрузка туда необходимых файлов, указанных в массиве tasks.</summary>
+					<div class="filename">.shadowftprc</div>
+<pre>
+	<code>{
+    "tasks": {
+        "main": [["main.css","www/styles/main.css"]]
+    },
+    "host": "127.0.0.1",
+    "user": "admin",
+    "password": "ghh43sq32",
+    "localDir": "C:/develop/",
+    "remoteDir": "/"
+}</code>
+</pre>
+					
+				<summary>Для генерации <code>.shadowftprc</code> можно воспользоваться командой <i>init</i></summary>
+				<pre><code>shadowftp init</code></pre>
+				<div class="npm"><img src="demo/images/dialog.jpg" alt="shadowftp init"></div>
+				<summary>Скрипт задаст вам несколько вопросов, каждый из которых можно пропустить, что бы потом внести правки самостоятельно.</summary>
+				<summary>Когда вы выполняете команду shadowftp скрипт начинает загружать на сервер все файлы из списка tasks, однако вы можете загрузить только конкретный таск, указав его имя в качестве первого атрибута:</summary>
+				<pre><code>shadowftp main</code></pre>
+				</div>
+				<div class="col-md-12">
+					<h4>Разработка</h4>
+					
+					<summary>Сообщить об ошибке: <a href="https://github.com/morulus/shadowftp/issues">https://github.com/morulus/shadowftp/issues</a></summary>
+					<summary>Форкнуть: <a href="https://github.com/morulus/shadowftp">https://github.com/morulus/shadowftp</a></summary>
+					<summary>
+						<h5>Раскрутка:</h5>
+						<div class="bar">
+							<span><!-- Put this script tag to the place, where the Share button will be -->
+	<script type="text/javascript"><!--
+	document.write(VK.Share.button({
+		url: "http://morulus.github.io/shadowftp/",
+		title:document.getElementsByTagName('title')[0].innerText,
+		image:"http://morulus.github.io/shadowftp/images/shadowftpjs.png",
+		description: document.getElementById('descript').innerText,
+		noparse: true
+	},{type: "button_nocount", text: "Запостить"}));
+	--></script>
+							</span>
+							<span><div class="fb-share-button" data-href="http://morulus.github.io/shadowftp/" data-layout="button"></div></span>
+						</div>
+				</summary>
+					
+					
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+				<article>Автор библиотеки VendorJs — <a href="http://github.com/morulus/" title="Vladimir Kalmykov (@morulus)" class="contac hint">@morulus<img src="demo/images/morulus.png" /></a>. Версия: <span class="version" id="version">1.4</span></article>
+		</div>
+	</section>
+	<a href="https://github.com/morulus/shadowftp/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&appId=480157075396856&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+<script>
+	vendor.getJson('package.json', function(info) { 
+		document.getElementById('version').innerHTML = info.version;
+	});
+
+
+</script>
+</html>

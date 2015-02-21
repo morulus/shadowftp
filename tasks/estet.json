@@ -1,0 +1,22 @@
+{
+	"host": "176.57.210.30",
+	"user": "cl236871_vladimir",
+	"password": "sh3JAfSX",
+	"localDir": "R:/home/",
+	"remoteDir": "/",
+	"tasks": {
+		"estetprimecss": [
+			["estetica.divans/www/esofas/styles/main.css","estetica.ru/public_html/newest/esofas/styles/main.css"]
+		],
+		"estetprimejs": [
+			["estetica.divans/www/esofas/js/main.min.js","estetica.ru/public_html/newest/esofas/js/main.min.js"],
+			["estetica.divans/www/esofas/js/main.min.js.map","estetica.ru/public_html/newest/esofas/js/main.min.js.map"]
+		],
+		"estetmobcss": [
+			["estetica.mobile/www/estetmob/css/main.css","estetica.ru/public_html/bitrix/templates/estetica_mob/css/main.css"]
+		],
+		"estetmobjs": [
+			["estetica.mobile/www/estetmob/js/main.min.js","estetica.ru/public_html/bitrix/templates/estetica_mob/css/main.min.js"]
+		]
+	}
+}

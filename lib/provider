@@ -1,0 +1,22 @@
+#! /usr/bin/env node
+// -*- js -*-
+
+"use strict";
+
+var fs = require('fs');
+var colors = require('colors');
+
+// Task taskpack name
+switch (process.argv[2]||false) {
+	case 'init':
+		var init = require('../lib/newinit');
+		init.init(process.cwd());
+	break;
+	default:
+		require('../lib/shadowftp')();
+	break;
+}
+
+
+
+
